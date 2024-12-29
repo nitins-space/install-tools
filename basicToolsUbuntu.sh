@@ -51,6 +51,16 @@ install_kubectl(){
 
 }
 
+#install k9s - open source tool - Not yet working
+# https://k9scli.io
+# https://github.com/derailed/k9s
+install_k9s(){
+    wget https://github.com/derailed/k9s/releases/download/v0.32.7/k9s_linux_amd64.deb
+    sudo apt install ./k9s_linux_amd64.deb
+    rm k9s_linux_amd64.deb
+    k9s
+}
+
 #Install minikube 
 # https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Farm64%2Fstable%2Fbinary+download
 install_minikube(){
@@ -68,6 +78,7 @@ verify_tools_installation(){
 # install_terraform
 install_helm
 install_minikube
+# install_k9s
 verify_tools_installation
 
 
