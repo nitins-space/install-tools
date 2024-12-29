@@ -9,6 +9,7 @@ sudo apt-get install -y  vim
 sudo apt-get install -y  git
 sudo apt-get install -y  htop
 sudo apt-get install -y python3
+sudo apt-get install netcat-traditional
 
 
 # Install Terraform - Not yet working
