@@ -9,7 +9,6 @@ sudo apt-get install -y  vim
 sudo apt-get install -y  git
 sudo apt-get install -y  htop
 sudo apt-get install -y python3
-sudo apt-get install -y python3-pip
 
 
 # Install Terraform - Not yet working
@@ -54,10 +53,11 @@ install_kubectl(){
 verify_tools_installation(){
     python3 --version
     git --version
+    helm version
 
 }
 
-install_terraform
+# install_terraform
 install_helm
 verify_tools_installation
 
