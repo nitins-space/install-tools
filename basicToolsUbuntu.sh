@@ -50,15 +50,23 @@ install_kubectl(){
 
 }
 
+#Install minikube 
+# https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Farm64%2Fstable%2Fbinary+download
+install_minikube(){
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-arm64
+    sudo install minikube-linux-arm64 /usr/local/bin/minikube && rm minikube-linux-arm64
+}
+
 verify_tools_installation(){
     python3 --version
     git --version
     helm version
-
+    minikube version
 }
 
 # install_terraform
 install_helm
+install_minikube
 verify_tools_installation
 
 
